@@ -9,9 +9,9 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t vladyslavkorzun/consumer:latest .
+      - docker build -t $DOCKER_PROJECT:$DOCKER_TAG .
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push vladyslavkorzun/consumer:latest
+      - docker push $DOCKER_PROJECT:$DOCKER_TAG
