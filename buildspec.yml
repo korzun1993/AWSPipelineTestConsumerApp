@@ -5,7 +5,6 @@ phases:
     commands:
       - echo Logging in to Docker Hub...
       - docker login --username $DOCKER_NAME --password $DOCKER_PASSWORD
-      - sudo systemctl start docker
   build:
     commands:
       - echo Build started on `date`
@@ -15,4 +14,4 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/vladyslavkorzun/consumer:latest
+      - docker push vladyslavkorzun/consumer:latest
