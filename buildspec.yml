@@ -5,6 +5,7 @@ phases:
     commands:
       - echo Logging in to Docker Hub...
       - docker login --username $DOCKER_NAME --password $DOCKER_PASSWORD
+      - sudo systemctl start docker
   build:
     commands:
       - echo Build started on `date`
